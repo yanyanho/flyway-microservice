@@ -5,7 +5,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.client.AutoConfigureWebClient;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -13,14 +12,14 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class DemoaApplicationTests {
 
-//	@Autowired
-//	Flyway flyway;
-//
-//	@Before
-//	public void setUp() throws Exception {
-//				flyway.clean();
-//				flyway.migrate();
-//		}
+	@Autowired
+	Flyway flyway;
+
+	@Before
+	public void setUp() throws Exception {
+				flyway.clean();
+				flyway.migrate();
+		}
 		@Test
 	public void print() {
 		System.out.println("test");
